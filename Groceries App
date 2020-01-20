@@ -1,0 +1,68 @@
+class Product {
+  constructor(name, section) {
+    this.name = name;
+    this.section = section;
+  }
+};
+// The above code enables efficient creation of products
+
+const apple = new Product('1.apple', 'a');
+const tomato = new Product('2.tomato', 'a');
+const potato = new Product('3.potato', 'a');
+const onion = new Product('4.onion', 'a');
+
+const beef = new Product('1.beef', 'b');
+const chicken = new Product('2.chicken', 'b');
+const salami = new Product('3.salami', 'b');
+const ham = new Product('4.ham', 'b');
+
+const pasta = new Product('1.pasta', 'c');
+const rice = new Product('2.rice', 'c');
+const oil = new Product('3.oil', 'c');
+const spices = new Product('4.spices', 'c');
+
+const milk = new Product('1.milk', 'd');
+const cheese = new Product('2.cheese', 'd');
+const eggs = new Product('3.eggs', 'd');
+const flour = new Product('4.flour', 'd');
+// The above code creates all the different products
+
+let groceryListA = [];
+let groceryListB = [];
+let groceryListC = [];
+let groceryListD = [];
+// The above code creates the grocerylist as arrays
+
+let groceries = () => {
+    for (let i=0; i<arguments.length; i++) {
+      if (arguments[i].section === 'a') {
+        groceryListA.push(arguments[i].name);
+      } else if (arguments[i].section === 'b') {
+        groceryListB.push(arguments[i].name);
+      } else if (arguments[i].section === 'c') {
+        groceryListC.push(arguments[i].name);
+      } else if (arguments[i].section === 'd') {
+        groceryListD.push(arguments[i].name);
+      } else {
+        console.log('Unknown product')
+      }
+    }
+  };
+// The above code organizes the different products into the arrays, based on section
+
+groceries(ham, salami, tomato, cheese, flour, eggs, rice);
+// Use this to create your grocerylist! write your products into the brackets.
+// Your options are: apple, tomato, potato, onion, beef, chicken, salami, ham,
+// pasta, rice, oil, spices, milk, cheese, eggs, flour.
+
+groceryListA.sort();
+groceryListB.sort();
+groceryListC.sort();
+groceryListD.sort();
+// The above code sorts each product per section by number
+
+console.log('section A: ' + groceryListA);
+console.log('section B: ' + groceryListB);
+console.log('section C: ' + groceryListC);
+console.log('section D: ' + groceryListD);
+// The above code prints your grocerylist onto the console
