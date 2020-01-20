@@ -33,7 +33,7 @@ let groceryListC = [];
 let groceryListD = [];
 // The above code creates the grocerylist as arrays
 
-let groceries = () => {
+function groceries() {
     for (let i=0; i<arguments.length; i++) {
       if (arguments[i].section === 'a') {
         groceryListA.push(arguments[i].name);
